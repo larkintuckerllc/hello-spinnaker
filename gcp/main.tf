@@ -17,3 +17,9 @@ module "halyard" {
   zone   = var.zones[0] 
 }
 
+module "cluster" {
+  source = "./modules/cluster"
+  region = var.region
+  zones  = var.zones
+}
+ 
