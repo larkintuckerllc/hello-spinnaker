@@ -12,14 +12,16 @@ provider "google" {
   project = var.project
 }
 
+module "cluster" {
+  source = "./modules/cluster"
+  master_version = var.master_version
+  node_version   = var.node_version
+  region         = var.region
+  zones          = var.zones
+}
+
 module "halyard" {
   source = "./modules/halyard"
   zone   = var.zones[0] 
 }
 
-module "cluster" {
-  source = "./modules/cluster"
-  region = var.region
-  zones  = var.zones
-}
- 
