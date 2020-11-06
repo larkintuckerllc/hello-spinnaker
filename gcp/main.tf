@@ -25,3 +25,7 @@ module "halyard" {
   zone   = var.zones[0] 
 }
 
+module "storage" {
+  source = "./modules/storage"
+}
+
