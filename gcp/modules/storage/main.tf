@@ -1,6 +1,6 @@
 resource "google_service_account" "this" {
   account_id   = "spinnaker-service-account"
-  display_name = "Spinnaker Service Account"
+  display_name = "Spinnaker"
 }
 
 resource "google_project_iam_binding" "this" {
