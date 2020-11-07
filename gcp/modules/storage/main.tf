@@ -1,5 +1,5 @@
 resource "google_service_account" "this" {
-  account_id   = "spinnaker-service-account"
+  account_id   = "spinnaker"
   display_name = "Spinnaker"
 }
 
